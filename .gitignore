@@ -122,3 +122,6 @@ Procfile
 
 # Static files
 staticfiles/
+
+# Render
+.render
