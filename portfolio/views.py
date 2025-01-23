@@ -10,8 +10,11 @@ def about(request):
     return render(request, 'portfolio/about.html')
 
 def projects(request):
-    projects = Project.objects.all()
-    return render(request, 'portfolio/projects.html', {'projects': projects})
+    try:
+        projects = Project.objects.all()
+        return render(request, 'portfolio/projects.html', {'projects': projects})
+    except Exception as e:
+        return render(request, 'portfolio/error.html', {'error': str(e)})
 
 def contact(request):
     if request.method == 'POST':
