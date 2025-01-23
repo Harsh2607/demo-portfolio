@@ -1,3 +1,4 @@
+pip==24.3.1
 asgiref==3.8.1
 Django==4.2.18
 django-bootstrap-v5==1.0.11
